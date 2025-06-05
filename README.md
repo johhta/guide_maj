@@ -43,26 +43,26 @@ python mainsetup.py
 
 11. Добавляем конфигурацию для MajesticMCL:
 ```
-Streamer("majesticmcl", 
-  settings=StreamerSettings(
-    make_predictions=False,
-    follow_raid=True,
-    claim_drops=True,
-    watch_streak=True,
-    bet=BetSettings(
-      strategy=Strategy.SMART,
-      percentage=5,
-      stealth_mode=True,
-      percentage_gap=20,
-      max_points=234,
-      filter_condition=FilterCondition(
-        by=OutcomeKeys.TOTAL_USERS,
-        where=Condition.LTE,
-        value=800
-      )
-    )
-  )
-)
+       Streamer("majesticmcl", 
+          settings=StreamerSettings(
+            make_predictions=False,
+            follow_raid=True,
+            claim_drops=True,
+            watch_streak=True,
+            bet=BetSettings(
+              strategy=Strategy.SMART,
+              percentage=5,
+              stealth_mode=True,
+              percentage_gap=20,
+              max_points=234,
+              filter_condition=FilterCondition(
+                by=OutcomeKeys.TOTAL_USERS,
+                where=Condition.LTE,
+                value=800
+              )
+            )
+          )
+        )
 ```
 ![Настройка стримера](https://drive.google.com/uc?export=view&id=14M99pesUSnC8oHVLV0vrPHWeEOL_mO8H)
 
