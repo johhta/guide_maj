@@ -1,82 +1,139 @@
-# Фармим маджи с помощью твича мцл
+# Фармим маджи с помощью Twitch MCL
 
-1. Качаем архив через кнопку по [ссылке](https://github.com/Gunthersuper/Twitch-Channel-Points-Miner-Render)
-![image](https://drive.google.com/uc?export=view&id=15DmKrSUYUgNZHNs4FpDvF6jg8wJ0OfHT)
+## Установка и настройка
 
-2. Распаковываем в любую папку этот архив и настраиваем mainsetup.py
+1. Скачиваем архив через кнопку по ссылке:  
+   https://github.com/Gunthersuper/Twitch-Channel-Points-Miner-Render
 
-3. Вставляем логин от твича и если хотим, пароль
-![image](https://drive.google.com/uc?export=view&id=1w1-8qXz7hBh3CYtoXDVf-sr5uk--6Z6f)
+   [Изображение: Шаг 1 - Скачивание архива](https://drive.google.com/uc?export=view&id=15DmKrSUYUgNZHNs4FpDvF6jg8wJ0OfHT)
 
-4. Скачиваем последнюю версию питона с оф.сайта python.org
-![image](https://drive.google.com/uc?export=view&id=1KqDScUUPZJw925WVPFOssvZ6ajiUj7JH)
+2. Распаковываем архив в любую папку и настраиваем `mainsetup.py`
 
-5. Устанавливаем не забыв нажать галку на "Add python to PATH" при установке
+3. Вводим логин от Twitch (и пароль при необходимости):
 
-6. Заходим в папку с майнером и вводим в поисковую строку cmd
-![image](https://drive.google.com/uc?export=view&id=1W9pi1V5OrU1TcI0Z2woMk8kTVQ7ixxZj)
+   [Изображение: Шаг 3 - Ввод данных](https://drive.google.com/uc?export=view&id=1w1-8qXz7hBh3CYtoXDVf-sr5uk--6Z6f)
 
-7. Вводим туда `pip install -r requirements.txt` и ждём окончания установки
+4. Скачиваем Python с официального сайта:  
+   https://www.python.org/downloads/
 
-8. Если вылезает ошибка с командой в конце, то просто копируем команду из ошибки и вставляем в кмд, далее пробуем ещё раз ввести прошлую команду
+   [Изображение: Шаг 4 - Установка Python](https://drive.google.com/uc?export=view&id=1KqDScUUPZJw925WVPFOssvZ6ajiUj7JH)
 
-9. Далее запускаем сам скрипт для получения куки файлов `python mainsetup.py`
+5. При установке обязательно отмечаем галочку "Add Python to PATH"
 
-10. Переходим по ссылке из скрипта и вводим туда код от туда
-![image](https://drive.google.com/uc?export=view&id=1j7Y937FohYK7QCH0ql1Wb-0tPPikPqDu)
+## Настройка майнера
 
-11. Можно закрывать скрипт и переходить к настройке main.py
+6. Открываем папку с майнером и вводим в адресной строке `cmd`:
 
-12. Если нужны уведомления в телеграм или дс канал, то следуя комментам вводим нужные значения
-![image](https://drive.google.com/uc?export=view&id=1lTTP_NMT3b4tfwKr9nVTGmUzWTRsob_d)
+   [Изображение: Шаг 6 - Командная строка](https://drive.google.com/uc?export=view&id=1W9pi1V5OrU1TcI0Z2woMk8kTVQ7ixxZj)
 
-13. Удаляем всех лишних стримеров из списка и добавляем строку с твичом мцла 
-`Streamer("majesticmcl", settings=StreamerSettings(make_predictions=False, follow_raid=True, claim_drops=True, watch_streak=True, bet=BetSettings(strategy=Strategy.SMART, percentage=5, stealth_mode=True, percentage_gap=20, max_points=234, filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_USERS, where=Condition.LTE, value=800))))`
-![image](https://drive.google.com/uc?export=view&id=14M99pesUSnC8oHVLV0vrPHWeEOL_mO8H)
+7. Устанавливаем зависимости:
+  `pip install -r requirements.txt`
 
-14. Если хотите чтоб скрипт сам ставил на самые вероятные исходы ставок баллами, то включаете в строке выше ставки изменив `make_predictions=False` на `make_predictions=True`
+9. Получаем cookie-файлы:
+   `python mainsetup.py`
 
-15. Если найдёте стримеров которые дают нужные вам бонусы за баллы канал, например маджи, деньги на сервере или сабки на любых стримеров, то добавляйте их ник следующей строкой в файле main.py по шаблону ниже и включайте ставки если надо редактируя make_predictions
-`Streamer("ЗДЕСЬ НИК СТРИМЕРА", settings=StreamerSettings(make_predictions=False, follow_raid=True, claim_drops=True, watch_streak=True, bet=BetSettings(strategy=Strategy.SMART, percentage=5, stealth_mode=True, percentage_gap=20, max_points=234, filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_USERS, where=Condition.LTE, value=800))))`
 
-16. Настроив это всё, заходим на github.com, регистрируемся и создаём приватный репозиторий
-![image](https://drive.google.com/uc?export=view&id=1V8yNpA_clw9OHfv_LJNDHwowel_o_CqU)
-![image](https://drive.google.com/uc?export=view&id=1hFYONMax9t5d-qlSTRE53xBuQug3YohI)
+9. Авторизуемся через Twitch по полученной ссылке:
 
-17. Заливаем всё содержимое папки майнера на гх
-![image](https://drive.google.com/uc?export=view&id=1GQvJsp0xysuOHTC-QVueeemhHL2oz2VN)
-![image](https://drive.google.com/uc?export=view&id=1Pc8CK8o1fnJUm1yNythLjfnqveVIIdv2)
+[Изображение: Шаг 9 - Авторизация](https://drive.google.com/uc?export=view&id=1j7Y937FohYK7QCH0ql1Wb-0tPPikPqDu)
 
-18. Регаемся на сайте render.com (можно сразу через гитхаб)
+10. Настраиваем основной файл `main.py`
 
-19. Добавляем Web Service в дэшборде
-![image](https://drive.google.com/uc?export=view&id=18efAROz9rOEP4peKejWCH1He40RXIDhx)
+## Конфигурация стримеров
 
-20. Выбираем нужный репозиторий и ставим Python 3 вместо Docker
-![image](https://drive.google.com/uc?export=view&id=1T7aw15EYEPWdjo26HLsYT8aUMNQRytqA)
+11. Настройка уведомлений (если нужны):
 
-22. Вставляем команду для запуска майнера `python main.py` и ставим бесплатный тарифный план
-![image](https://drive.google.com/uc?export=view&id=1F_F_AOikOhDNgWE9Os0pYcx7yKzJ7vRo)
+ [Изображение: Шаг 11 - Настройка уведомлений](https://drive.google.com/uc?export=view&id=1lTTP_NMT3b4tfwKr9nVTGmUzWTRsob_d)
 
-23. Вставляем username и password в поля, вводим в value свои логин и пароль от твича
-![image](https://drive.google.com/uc?export=view&id=1aNm2Otc5cNiQ0xwHVdy7V1LaACmVhjqB)
+12. Добавляем конфигурацию для MajesticMCL:
+ ```
+ Streamer("majesticmcl", 
+   settings=StreamerSettings(
+     make_predictions=False,
+     follow_raid=True,
+     claim_drops=True,
+     watch_streak=True,
+     bet=BetSettings(
+       strategy=Strategy.SMART,
+       percentage=5,
+       stealth_mode=True,
+       percentage_gap=20,
+       max_points=234,
+       filter_condition=FilterCondition(
+         by=OutcomeKeys.TOTAL_USERS,
+         where=Condition.LTE,
+         value=800
+       )
+     )
+   )
+ )
+ ```
 
-24. Тыкаем на Deploy Web Service и ждём пока это всё запустит
-![image](https://drive.google.com/uc?export=view&id=1Si-kk4bjNb2XgpLSdtfasjswcOEJmh7D)
+ [Изображение: Шаг 12 - Настройка стримера](https://drive.google.com/uc?export=view&id=14M99pesUSnC8oHVLV0vrPHWeEOL_mO8H)
 
-25. После запуска берём ссылку и идём на сайт cron-job.org
-![image](https://drive.google.com/uc?export=view&id=1QG4dkEhlFD_6hNeSmfwWiTpOqF9Sv7XR)
+13. Для автоматических ставок меняем `make_predictions=False` на `True`
 
-26. Регаемся на сайте, заходим в Cron задания и создаём новое
-![image](https://drive.google.com/uc?export=view&id=1y_3qUVKnJ2Eo7NQORCYTnHQyDJQX33p3)
+## Развертывание на Render.com
 
-27. Вставляем url с рендера и ставим таймаут 2 минуты
-![image](https://drive.google.com/uc?export=view&id=1_rd09JIG5uEKVa37fw0vaCMfPUlAe_hu)
+14. Создаем приватный репозиторий на GitHub:
 
-28. Поздравляю, всё работает.
+ [Изображение: Шаг 14-1 - Создание репозитория](https://drive.google.com/uc?export=view&id=1V8yNpA_clw9OHfv_LJNDHwowel_o_CqU)
+ 
+ [Изображение: Шаг 14-2 - Настройки репозитория](https://drive.google.com/uc?export=view&id=1hFYONMax9t5d-qlSTRE53xBuQug3YohI)
 
-29. Накопив нужное кол-во баллов 15к и/или более покупаем на твиче нужные награды, 2200 маджей самое выгодное из маджей, остальное по потребности, пишете свой сервер и статик при покупке
-![image](https://drive.google.com/uc?export=view&id=1BE4QMY83ZXEuuFVYdnpN_3e0NZeQpUEB)
+15. Загружаем файлы майнера:
 
-Если хотите мониторить ход работы софта, заходим в https://dashboard.render.com/ и переходим в ваш веб сервис, далее заходим в лог и чекаем ход получения наград
-![image](https://drive.google.com/uc?export=view&id=1aYDyJAtv9BHXL-KnIR3uP8CTqutQYadY)
+ [Изображение: Шаг 15-1 - Загрузка файлов](https://drive.google.com/uc?export=view&id=1GQvJsp0xysuOHTC-QVueeemhHL2oz2VN)
+ 
+ [Изображение: Шаг 15-2 - Подтверждение](https://drive.google.com/uc?export=view&id=1Pc8CK8o1fnJUm1yNythLjfnqveVIIdv2)
+
+16. Регистрируемся на https://render.com
+
+17. Создаем Web Service:
+
+ [Изображение: Шаг 17 - Создание сервиса](https://drive.google.com/uc?export=view&id=18efAROz9rOEP4peKejWCH1He40RXIDhx)
+
+18. Выбираем Python 3:
+
+ [Изображение: Шаг 18 - Выбор окружения](https://drive.google.com/uc?export=view&id=1T7aw15EYEPWdjo26HLsYT8aUMNQRytqA)
+
+19. Указываем команду для запуска:
+ ```
+ python main.py
+ ```
+
+ [Изображение: Шаг 19 - Настройка сервиса](https://drive.google.com/uc?export=view&id=1F_F_AOikOhDNgWE9Os0pYcx7yKzJ7vRo)
+
+20. Вводим данные для авторизации:
+
+ [Изображение: Шаг 20 - Учетные данные](https://drive.google.com/uc?export=view&id=1aNm2Otc5cNiQ0xwHVdy7V1LaACmVhjqB)
+
+21. Запускаем деплой:
+
+ [Изображение: Шаг 21 - Запуск](https://drive.google.com/uc?export=view&id=1Si-kk4bjNb2XgpLSdtfasjswcOEJmh7D)
+
+## Настройка Cron Job
+
+22. Переходим на https://cron-job.org и создаем задание:
+
+ [Изображение: Шаг 22 - Создание задания](https://drive.google.com/uc?export=view&id=1QG4dkEhlFD_6hNeSmfwWiTpOqF9Sv7XR)
+
+23. Настраиваем расписание (таймаут 2 минуты):
+
+ [Изображение: Шаг 23 - Настройка расписания](https://drive.google.com/uc?export=view&id=1y_3qUVKnJ2Eo7NQORCYTnHQyDJQX33p3)
+
+## Получение наград
+
+24. После накопления 15к+ баллов покупаем награды в Twitch:
+ - 2200 маджей (самая выгодная награда)
+ - Указываем сервер и ник при покупке
+
+ [Изображение: Шаг 24 - Покупка наград](https://drive.google.com/uc?export=view&id=1_rd09JIG5uEKVa37fw0vaCMfPUlAe_hu)
+
+## Мониторинг
+
+Для проверки работы:
+- Открываем https://dashboard.render.com
+- Проверяем логи выполнения
+
+[Изображение: Мониторинг логов](https://drive.google.com/uc?export=view&id=1aYDyJAtv9BHXL-KnIR3uP8CTqutQYadY)
