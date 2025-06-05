@@ -73,7 +73,7 @@ python main.py
 ```
 ![Настройка сервиса](https://drive.google.com/uc?export=view&id=1F_F_AOikOhDNgWE9Os0pYcx7yKzJ7vRo)
 
-19. Вводим данные для авторизации:  
+19. Вводим данные для авторизации на твиче (на всякий случай, я точно не знаю на что это влияет):  
 ![Учетные данные](https://drive.google.com/uc?export=view&id=1aNm2Otc5cNiQ0xwHVdy7V1LaACmVhjqB)
 
 20. Запускаем деплой:  
@@ -85,15 +85,16 @@ python main.py
 
 22. Создаем новое задание:  
 ![Создание задания](https://drive.google.com/uc?export=view&id=1QG4dkEhlFD_6hNeSmfwWiTpOqF9Sv7XR)
+![Создание задания 1](https://drive.google.com/uc?export=view&id=1y_3qUVKnJ2Eo7NQORCYTnHQyDJQX33p3)
 
-23. Настраиваем расписание (таймаут 2 минуты):  
-![Настройка расписания](https://drive.google.com/uc?export=view&id=1y_3qUVKnJ2Eo7NQORCYTnHQyDJQX33p3)
+24. Настраиваем расписание (таймаут 2 минуты):  
+![Настройка расписания](https://drive.google.com/uc?export=view&id=1_rd09JIG5uEKVa37fw0vaCMfPUlAe_hu)
 
 ## 🎁 Получение наград
 
 24. После накопления 15к+ баллов покупаем награды в Twitch:  
 💰 2200 маджей (самая выгодная награда)  
-![Покупка наград](https://drive.google.com/uc?export=view&id=1_rd09JIG5uEKVa37fw0vaCMfPUlAe_hu)
+![Покупка наград](https://drive.google.com/uc?export=view&id=1BE4QMY83ZXEuuFVYdnpN_3e0NZeQpUEB)
 
 ## 🔍 Мониторинг
 
